@@ -23,6 +23,7 @@ This can only be done by the logged in user.
 
 ### Example
 ```ruby
+# load the gem
 require 'swagger_client'
 
 api_instance = SwaggerClient::UserApi.new
@@ -32,6 +33,7 @@ opts = {
 }
 
 begin
+  #Create user
   api_instance.create_user(opts)
 rescue SwaggerClient::ApiError => e
   puts "Exception when calling create_user: #{e}"
@@ -68,6 +70,7 @@ Creates list of users with given input array
 
 ### Example
 ```ruby
+# load the gem
 require 'swagger_client'
 
 api_instance = SwaggerClient::UserApi.new
@@ -77,6 +80,7 @@ opts = {
 }
 
 begin
+  #Creates list of users with given input array
   api_instance.create_users_with_array_input(opts)
 rescue SwaggerClient::ApiError => e
   puts "Exception when calling create_users_with_array_input: #{e}"
@@ -113,6 +117,7 @@ Creates list of users with given input array
 
 ### Example
 ```ruby
+# load the gem
 require 'swagger_client'
 
 api_instance = SwaggerClient::UserApi.new
@@ -122,6 +127,7 @@ opts = {
 }
 
 begin
+  #Creates list of users with given input array
   api_instance.create_users_with_list_input(opts)
 rescue SwaggerClient::ApiError => e
   puts "Exception when calling create_users_with_list_input: #{e}"
@@ -158,8 +164,9 @@ This can only be done by the logged in user.
 
 ### Example
 ```ruby
+# load the gem
 require 'swagger_client'
-
+# setup authorization 
 SwaggerClient.configure do |config|
   # Configure HTTP basic authorization: test_http_basic
   config.username = 'YOUR USERNAME'
@@ -172,6 +179,7 @@ username = "username_example" # String | The name that needs to be deleted
 
 
 begin
+  #Delete user
   api_instance.delete_user(username)
 rescue SwaggerClient::ApiError => e
   puts "Exception when calling delete_user: #{e}"
@@ -208,6 +216,7 @@ Get user by user name
 
 ### Example
 ```ruby
+# load the gem
 require 'swagger_client'
 
 api_instance = SwaggerClient::UserApi.new
@@ -216,6 +225,7 @@ username = "username_example" # String | The name that needs to be fetched. Use 
 
 
 begin
+  #Get user by user name
   result = api_instance.get_user_by_name(username)
   p result
 rescue SwaggerClient::ApiError => e
@@ -253,6 +263,7 @@ Logs user into the system
 
 ### Example
 ```ruby
+# load the gem
 require 'swagger_client'
 
 api_instance = SwaggerClient::UserApi.new
@@ -263,6 +274,7 @@ opts = {
 }
 
 begin
+  #Logs user into the system
   result = api_instance.login_user(opts)
   p result
 rescue SwaggerClient::ApiError => e
@@ -301,11 +313,13 @@ Logs out current logged in user session
 
 ### Example
 ```ruby
+# load the gem
 require 'swagger_client'
 
 api_instance = SwaggerClient::UserApi.new
 
 begin
+  #Logs out current logged in user session
   api_instance.logout_user
 rescue SwaggerClient::ApiError => e
   puts "Exception when calling logout_user: #{e}"
@@ -339,6 +353,7 @@ This can only be done by the logged in user.
 
 ### Example
 ```ruby
+# load the gem
 require 'swagger_client'
 
 api_instance = SwaggerClient::UserApi.new
@@ -350,6 +365,7 @@ opts = {
 }
 
 begin
+  #Updated user
   api_instance.update_user(username, opts)
 rescue SwaggerClient::ApiError => e
   puts "Exception when calling update_user: #{e}"

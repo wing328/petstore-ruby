@@ -26,8 +26,9 @@ Add a new pet to the store
 
 ### Example
 ```ruby
+# load the gem
 require 'swagger_client'
-
+# setup authorization 
 SwaggerClient.configure do |config|
   # Configure OAuth2 access token for authorization: petstore_auth
   config.access_token = 'YOUR ACCESS TOKEN'
@@ -40,6 +41,7 @@ opts = {
 }
 
 begin
+  #Add a new pet to the store
   api_instance.add_pet(opts)
 rescue SwaggerClient::ApiError => e
   puts "Exception when calling add_pet: #{e}"
@@ -76,8 +78,9 @@ Fake endpoint to test byte array in body parameter for adding a new pet to the s
 
 ### Example
 ```ruby
+# load the gem
 require 'swagger_client'
-
+# setup authorization 
 SwaggerClient.configure do |config|
   # Configure OAuth2 access token for authorization: petstore_auth
   config.access_token = 'YOUR ACCESS TOKEN'
@@ -90,6 +93,7 @@ opts = {
 }
 
 begin
+  #Fake endpoint to test byte array in body parameter for adding a new pet to the store
   api_instance.add_pet_using_byte_array(opts)
 rescue SwaggerClient::ApiError => e
   puts "Exception when calling add_pet_using_byte_array: #{e}"
@@ -126,8 +130,9 @@ Deletes a pet
 
 ### Example
 ```ruby
+# load the gem
 require 'swagger_client'
-
+# setup authorization 
 SwaggerClient.configure do |config|
   # Configure OAuth2 access token for authorization: petstore_auth
   config.access_token = 'YOUR ACCESS TOKEN'
@@ -142,6 +147,7 @@ opts = {
 }
 
 begin
+  #Deletes a pet
   api_instance.delete_pet(pet_id, opts)
 rescue SwaggerClient::ApiError => e
   puts "Exception when calling delete_pet: #{e}"
@@ -179,8 +185,9 @@ Multiple status values can be provided with comma separated strings
 
 ### Example
 ```ruby
+# load the gem
 require 'swagger_client'
-
+# setup authorization 
 SwaggerClient.configure do |config|
   # Configure OAuth2 access token for authorization: petstore_auth
   config.access_token = 'YOUR ACCESS TOKEN'
@@ -193,6 +200,7 @@ opts = {
 }
 
 begin
+  #Finds Pets by status
   result = api_instance.find_pets_by_status(opts)
   p result
 rescue SwaggerClient::ApiError => e
@@ -230,8 +238,9 @@ Muliple tags can be provided with comma seperated strings. Use tag1, tag2, tag3 
 
 ### Example
 ```ruby
+# load the gem
 require 'swagger_client'
-
+# setup authorization 
 SwaggerClient.configure do |config|
   # Configure OAuth2 access token for authorization: petstore_auth
   config.access_token = 'YOUR ACCESS TOKEN'
@@ -244,6 +253,7 @@ opts = {
 }
 
 begin
+  #Finds Pets by tags
   result = api_instance.find_pets_by_tags(opts)
   p result
 rescue SwaggerClient::ApiError => e
@@ -281,8 +291,9 @@ Returns a pet when ID &lt; 10.  ID &gt; 10 or nonintegers will simulate API erro
 
 ### Example
 ```ruby
+# load the gem
 require 'swagger_client'
-
+# setup authorization 
 SwaggerClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
@@ -299,6 +310,7 @@ pet_id = 789 # Integer | ID of pet that needs to be fetched
 
 
 begin
+  #Find pet by ID
   result = api_instance.get_pet_by_id(pet_id)
   p result
 rescue SwaggerClient::ApiError => e
@@ -336,8 +348,9 @@ Returns a pet when ID &lt; 10.  ID &gt; 10 or nonintegers will simulate API erro
 
 ### Example
 ```ruby
+# load the gem
 require 'swagger_client'
-
+# setup authorization 
 SwaggerClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
@@ -354,6 +367,7 @@ pet_id = 789 # Integer | ID of pet that needs to be fetched
 
 
 begin
+  #Fake endpoint to test inline arbitrary object return by 'Find pet by ID'
   result = api_instance.get_pet_by_id_in_object(pet_id)
   p result
 rescue SwaggerClient::ApiError => e
@@ -391,8 +405,9 @@ Returns a pet when ID &lt; 10.  ID &gt; 10 or nonintegers will simulate API erro
 
 ### Example
 ```ruby
+# load the gem
 require 'swagger_client'
-
+# setup authorization 
 SwaggerClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
@@ -409,6 +424,7 @@ pet_id = 789 # Integer | ID of pet that needs to be fetched
 
 
 begin
+  #Fake endpoint to test byte array return by 'Find pet by ID'
   result = api_instance.pet_pet_idtesting_byte_arraytrue_get(pet_id)
   p result
 rescue SwaggerClient::ApiError => e
@@ -446,8 +462,9 @@ Update an existing pet
 
 ### Example
 ```ruby
+# load the gem
 require 'swagger_client'
-
+# setup authorization 
 SwaggerClient.configure do |config|
   # Configure OAuth2 access token for authorization: petstore_auth
   config.access_token = 'YOUR ACCESS TOKEN'
@@ -460,6 +477,7 @@ opts = {
 }
 
 begin
+  #Update an existing pet
   api_instance.update_pet(opts)
 rescue SwaggerClient::ApiError => e
   puts "Exception when calling update_pet: #{e}"
@@ -496,8 +514,9 @@ Updates a pet in the store with form data
 
 ### Example
 ```ruby
+# load the gem
 require 'swagger_client'
-
+# setup authorization 
 SwaggerClient.configure do |config|
   # Configure OAuth2 access token for authorization: petstore_auth
   config.access_token = 'YOUR ACCESS TOKEN'
@@ -513,6 +532,7 @@ opts = {
 }
 
 begin
+  #Updates a pet in the store with form data
   api_instance.update_pet_with_form(pet_id, opts)
 rescue SwaggerClient::ApiError => e
   puts "Exception when calling update_pet_with_form: #{e}"
@@ -551,8 +571,9 @@ uploads an image
 
 ### Example
 ```ruby
+# load the gem
 require 'swagger_client'
-
+# setup authorization 
 SwaggerClient.configure do |config|
   # Configure OAuth2 access token for authorization: petstore_auth
   config.access_token = 'YOUR ACCESS TOKEN'
@@ -568,6 +589,7 @@ opts = {
 }
 
 begin
+  #uploads an image
   api_instance.upload_file(pet_id, opts)
 rescue SwaggerClient::ApiError => e
   puts "Exception when calling upload_file: #{e}"

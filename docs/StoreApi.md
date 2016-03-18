@@ -21,6 +21,7 @@ For valid response try integer IDs with value &lt; 1000. Anything above 1000 or 
 
 ### Example
 ```ruby
+# load the gem
 require 'swagger_client'
 
 api_instance = SwaggerClient::StoreApi.new
@@ -29,6 +30,7 @@ order_id = "order_id_example" # String | ID of the order that needs to be delete
 
 
 begin
+  #Delete purchase order by ID
   api_instance.delete_order(order_id)
 rescue SwaggerClient::ApiError => e
   puts "Exception when calling delete_order: #{e}"
@@ -65,8 +67,9 @@ A single status value can be provided as a string
 
 ### Example
 ```ruby
+# load the gem
 require 'swagger_client'
-
+# setup authorization 
 SwaggerClient.configure do |config|
   # Configure API key authorization: test_api_client_id
   config.api_key['x-test_api_client_id'] = 'YOUR API KEY'
@@ -86,6 +89,7 @@ opts = {
 }
 
 begin
+  #Finds orders by status
   result = api_instance.find_orders_by_status(opts)
   p result
 rescue SwaggerClient::ApiError => e
@@ -123,8 +127,9 @@ Returns a map of status codes to quantities
 
 ### Example
 ```ruby
+# load the gem
 require 'swagger_client'
-
+# setup authorization 
 SwaggerClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
@@ -135,6 +140,7 @@ end
 api_instance = SwaggerClient::StoreApi.new
 
 begin
+  #Returns pet inventories by status
   result = api_instance.get_inventory
   p result
 rescue SwaggerClient::ApiError => e
@@ -169,8 +175,9 @@ Returns an arbitrary object which is actually a map of status codes to quantitie
 
 ### Example
 ```ruby
+# load the gem
 require 'swagger_client'
-
+# setup authorization 
 SwaggerClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
@@ -181,6 +188,7 @@ end
 api_instance = SwaggerClient::StoreApi.new
 
 begin
+  #Fake endpoint to test arbitrary object return by 'Get inventory'
   result = api_instance.get_inventory_in_object
   p result
 rescue SwaggerClient::ApiError => e
@@ -215,8 +223,9 @@ For valid response try integer IDs with value &lt;= 5 or &gt; 10. Other values w
 
 ### Example
 ```ruby
+# load the gem
 require 'swagger_client'
-
+# setup authorization 
 SwaggerClient.configure do |config|
   # Configure API key authorization: test_api_key_header
   config.api_key['test_api_key_header'] = 'YOUR API KEY'
@@ -235,6 +244,7 @@ order_id = "order_id_example" # String | ID of pet that needs to be fetched
 
 
 begin
+  #Find purchase order by ID
   result = api_instance.get_order_by_id(order_id)
   p result
 rescue SwaggerClient::ApiError => e
@@ -272,8 +282,9 @@ Place an order for a pet
 
 ### Example
 ```ruby
+# load the gem
 require 'swagger_client'
-
+# setup authorization 
 SwaggerClient.configure do |config|
   # Configure API key authorization: test_api_client_id
   config.api_key['x-test_api_client_id'] = 'YOUR API KEY'
@@ -293,6 +304,7 @@ opts = {
 }
 
 begin
+  #Place an order for a pet
   result = api_instance.place_order(opts)
   p result
 rescue SwaggerClient::ApiError => e
