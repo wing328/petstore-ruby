@@ -33,14 +33,14 @@ SwaggerClient.configure do |config|
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api = SwaggerClient::PetApi.new
+api_instance = SwaggerClient::PetApi.new
 
 opts = { 
   body: SwaggerClient::Pet.new # Pet | Pet object that needs to be added to the store
 }
 
 begin
-  api.add_pet(opts)
+  api_instance.add_pet(opts)
 rescue SwaggerClient::ApiError => e
   puts "Exception when calling add_pet: #{e}"
 end
@@ -83,14 +83,14 @@ SwaggerClient.configure do |config|
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api = SwaggerClient::PetApi.new
+api_instance = SwaggerClient::PetApi.new
 
 opts = { 
   body: "B" # String | Pet object in the form of byte array
 }
 
 begin
-  api.add_pet_using_byte_array(opts)
+  api_instance.add_pet_using_byte_array(opts)
 rescue SwaggerClient::ApiError => e
   puts "Exception when calling add_pet_using_byte_array: #{e}"
 end
@@ -133,7 +133,7 @@ SwaggerClient.configure do |config|
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api = SwaggerClient::PetApi.new
+api_instance = SwaggerClient::PetApi.new
 
 pet_id = 789 # Integer | Pet id to delete
 
@@ -142,7 +142,7 @@ opts = {
 }
 
 begin
-  api.delete_pet(pet_id, opts)
+  api_instance.delete_pet(pet_id, opts)
 rescue SwaggerClient::ApiError => e
   puts "Exception when calling delete_pet: #{e}"
 end
@@ -186,14 +186,14 @@ SwaggerClient.configure do |config|
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api = SwaggerClient::PetApi.new
+api_instance = SwaggerClient::PetApi.new
 
 opts = { 
   status: ["available"] # Array<String> | Status values that need to be considered for query
 }
 
 begin
-  result = api.find_pets_by_status(opts)
+  result = api_instance.find_pets_by_status(opts)
   p result
 rescue SwaggerClient::ApiError => e
   puts "Exception when calling find_pets_by_status: #{e}"
@@ -237,14 +237,14 @@ SwaggerClient.configure do |config|
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api = SwaggerClient::PetApi.new
+api_instance = SwaggerClient::PetApi.new
 
 opts = { 
   tags: ["tags_example"] # Array<String> | Tags to filter by
 }
 
 begin
-  result = api.find_pets_by_tags(opts)
+  result = api_instance.find_pets_by_tags(opts)
   p result
 rescue SwaggerClient::ApiError => e
   puts "Exception when calling find_pets_by_tags: #{e}"
@@ -293,13 +293,13 @@ SwaggerClient.configure do |config|
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api = SwaggerClient::PetApi.new
+api_instance = SwaggerClient::PetApi.new
 
 pet_id = 789 # Integer | ID of pet that needs to be fetched
 
 
 begin
-  result = api.get_pet_by_id(pet_id)
+  result = api_instance.get_pet_by_id(pet_id)
   p result
 rescue SwaggerClient::ApiError => e
   puts "Exception when calling get_pet_by_id: #{e}"
@@ -348,13 +348,13 @@ SwaggerClient.configure do |config|
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api = SwaggerClient::PetApi.new
+api_instance = SwaggerClient::PetApi.new
 
 pet_id = 789 # Integer | ID of pet that needs to be fetched
 
 
 begin
-  result = api.get_pet_by_id_in_object(pet_id)
+  result = api_instance.get_pet_by_id_in_object(pet_id)
   p result
 rescue SwaggerClient::ApiError => e
   puts "Exception when calling get_pet_by_id_in_object: #{e}"
@@ -403,13 +403,13 @@ SwaggerClient.configure do |config|
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api = SwaggerClient::PetApi.new
+api_instance = SwaggerClient::PetApi.new
 
 pet_id = 789 # Integer | ID of pet that needs to be fetched
 
 
 begin
-  result = api.pet_pet_idtesting_byte_arraytrue_get(pet_id)
+  result = api_instance.pet_pet_idtesting_byte_arraytrue_get(pet_id)
   p result
 rescue SwaggerClient::ApiError => e
   puts "Exception when calling pet_pet_idtesting_byte_arraytrue_get: #{e}"
@@ -453,14 +453,14 @@ SwaggerClient.configure do |config|
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api = SwaggerClient::PetApi.new
+api_instance = SwaggerClient::PetApi.new
 
 opts = { 
   body: SwaggerClient::Pet.new # Pet | Pet object that needs to be added to the store
 }
 
 begin
-  api.update_pet(opts)
+  api_instance.update_pet(opts)
 rescue SwaggerClient::ApiError => e
   puts "Exception when calling update_pet: #{e}"
 end
@@ -503,7 +503,7 @@ SwaggerClient.configure do |config|
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api = SwaggerClient::PetApi.new
+api_instance = SwaggerClient::PetApi.new
 
 pet_id = "pet_id_example" # String | ID of pet that needs to be updated
 
@@ -513,7 +513,7 @@ opts = {
 }
 
 begin
-  api.update_pet_with_form(pet_id, opts)
+  api_instance.update_pet_with_form(pet_id, opts)
 rescue SwaggerClient::ApiError => e
   puts "Exception when calling update_pet_with_form: #{e}"
 end
@@ -558,7 +558,7 @@ SwaggerClient.configure do |config|
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api = SwaggerClient::PetApi.new
+api_instance = SwaggerClient::PetApi.new
 
 pet_id = 789 # Integer | ID of pet to update
 
@@ -568,7 +568,7 @@ opts = {
 }
 
 begin
-  api.upload_file(pet_id, opts)
+  api_instance.upload_file(pet_id, opts)
 rescue SwaggerClient::ApiError => e
   puts "Exception when calling upload_file: #{e}"
 end

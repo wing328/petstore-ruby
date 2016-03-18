@@ -23,13 +23,13 @@ For valid response try integer IDs with value &lt; 1000. Anything above 1000 or 
 ```ruby
 require 'swagger_client'
 
-api = SwaggerClient::StoreApi.new
+api_instance = SwaggerClient::StoreApi.new
 
 order_id = "order_id_example" # String | ID of the order that needs to be deleted
 
 
 begin
-  api.delete_order(order_id)
+  api_instance.delete_order(order_id)
 rescue SwaggerClient::ApiError => e
   puts "Exception when calling delete_order: #{e}"
 end
@@ -79,14 +79,14 @@ SwaggerClient.configure do |config|
   #config.api_key_prefix['x-test_api_client_secret'] = 'BEARER'
 end
 
-api = SwaggerClient::StoreApi.new
+api_instance = SwaggerClient::StoreApi.new
 
 opts = { 
   status: "placed" # String | Status value that needs to be considered for query
 }
 
 begin
-  result = api.find_orders_by_status(opts)
+  result = api_instance.find_orders_by_status(opts)
   p result
 rescue SwaggerClient::ApiError => e
   puts "Exception when calling find_orders_by_status: #{e}"
@@ -132,10 +132,10 @@ SwaggerClient.configure do |config|
   #config.api_key_prefix['api_key'] = 'BEARER'
 end
 
-api = SwaggerClient::StoreApi.new
+api_instance = SwaggerClient::StoreApi.new
 
 begin
-  result = api.get_inventory
+  result = api_instance.get_inventory
   p result
 rescue SwaggerClient::ApiError => e
   puts "Exception when calling get_inventory: #{e}"
@@ -178,10 +178,10 @@ SwaggerClient.configure do |config|
   #config.api_key_prefix['api_key'] = 'BEARER'
 end
 
-api = SwaggerClient::StoreApi.new
+api_instance = SwaggerClient::StoreApi.new
 
 begin
-  result = api.get_inventory_in_object
+  result = api_instance.get_inventory_in_object
   p result
 rescue SwaggerClient::ApiError => e
   puts "Exception when calling get_inventory_in_object: #{e}"
@@ -229,13 +229,13 @@ SwaggerClient.configure do |config|
   #config.api_key_prefix['test_api_key_query'] = 'BEARER'
 end
 
-api = SwaggerClient::StoreApi.new
+api_instance = SwaggerClient::StoreApi.new
 
 order_id = "order_id_example" # String | ID of pet that needs to be fetched
 
 
 begin
-  result = api.get_order_by_id(order_id)
+  result = api_instance.get_order_by_id(order_id)
   p result
 rescue SwaggerClient::ApiError => e
   puts "Exception when calling get_order_by_id: #{e}"
@@ -286,14 +286,14 @@ SwaggerClient.configure do |config|
   #config.api_key_prefix['x-test_api_client_secret'] = 'BEARER'
 end
 
-api = SwaggerClient::StoreApi.new
+api_instance = SwaggerClient::StoreApi.new
 
 opts = { 
   body: SwaggerClient::Order.new # Order | order placed for purchasing the pet
 }
 
 begin
-  result = api.place_order(opts)
+  result = api_instance.place_order(opts)
   p result
 rescue SwaggerClient::ApiError => e
   puts "Exception when calling place_order: #{e}"

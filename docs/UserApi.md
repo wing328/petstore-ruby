@@ -25,14 +25,14 @@ This can only be done by the logged in user.
 ```ruby
 require 'swagger_client'
 
-api = SwaggerClient::UserApi.new
+api_instance = SwaggerClient::UserApi.new
 
 opts = { 
   body: SwaggerClient::User.new # User | Created user object
 }
 
 begin
-  api.create_user(opts)
+  api_instance.create_user(opts)
 rescue SwaggerClient::ApiError => e
   puts "Exception when calling create_user: #{e}"
 end
@@ -70,14 +70,14 @@ Creates list of users with given input array
 ```ruby
 require 'swagger_client'
 
-api = SwaggerClient::UserApi.new
+api_instance = SwaggerClient::UserApi.new
 
 opts = { 
   body: [SwaggerClient::User.new] # Array<User> | List of user object
 }
 
 begin
-  api.create_users_with_array_input(opts)
+  api_instance.create_users_with_array_input(opts)
 rescue SwaggerClient::ApiError => e
   puts "Exception when calling create_users_with_array_input: #{e}"
 end
@@ -115,14 +115,14 @@ Creates list of users with given input array
 ```ruby
 require 'swagger_client'
 
-api = SwaggerClient::UserApi.new
+api_instance = SwaggerClient::UserApi.new
 
 opts = { 
   body: [SwaggerClient::User.new] # Array<User> | List of user object
 }
 
 begin
-  api.create_users_with_list_input(opts)
+  api_instance.create_users_with_list_input(opts)
 rescue SwaggerClient::ApiError => e
   puts "Exception when calling create_users_with_list_input: #{e}"
 end
@@ -166,13 +166,13 @@ SwaggerClient.configure do |config|
   config.password = 'YOUR PASSWORD'
 end
 
-api = SwaggerClient::UserApi.new
+api_instance = SwaggerClient::UserApi.new
 
 username = "username_example" # String | The name that needs to be deleted
 
 
 begin
-  api.delete_user(username)
+  api_instance.delete_user(username)
 rescue SwaggerClient::ApiError => e
   puts "Exception when calling delete_user: #{e}"
 end
@@ -210,13 +210,13 @@ Get user by user name
 ```ruby
 require 'swagger_client'
 
-api = SwaggerClient::UserApi.new
+api_instance = SwaggerClient::UserApi.new
 
 username = "username_example" # String | The name that needs to be fetched. Use user1 for testing.
 
 
 begin
-  result = api.get_user_by_name(username)
+  result = api_instance.get_user_by_name(username)
   p result
 rescue SwaggerClient::ApiError => e
   puts "Exception when calling get_user_by_name: #{e}"
@@ -255,7 +255,7 @@ Logs user into the system
 ```ruby
 require 'swagger_client'
 
-api = SwaggerClient::UserApi.new
+api_instance = SwaggerClient::UserApi.new
 
 opts = { 
   username: "username_example", # String | The user name for login
@@ -263,7 +263,7 @@ opts = {
 }
 
 begin
-  result = api.login_user(opts)
+  result = api_instance.login_user(opts)
   p result
 rescue SwaggerClient::ApiError => e
   puts "Exception when calling login_user: #{e}"
@@ -303,10 +303,10 @@ Logs out current logged in user session
 ```ruby
 require 'swagger_client'
 
-api = SwaggerClient::UserApi.new
+api_instance = SwaggerClient::UserApi.new
 
 begin
-  api.logout_user
+  api_instance.logout_user
 rescue SwaggerClient::ApiError => e
   puts "Exception when calling logout_user: #{e}"
 end
@@ -341,7 +341,7 @@ This can only be done by the logged in user.
 ```ruby
 require 'swagger_client'
 
-api = SwaggerClient::UserApi.new
+api_instance = SwaggerClient::UserApi.new
 
 username = "username_example" # String | name that need to be deleted
 
@@ -350,7 +350,7 @@ opts = {
 }
 
 begin
-  api.update_user(username, opts)
+  api_instance.update_user(username, opts)
 rescue SwaggerClient::ApiError => e
   puts "Exception when calling update_user: #{e}"
 end
