@@ -44,7 +44,7 @@ begin
   #Add a new pet to the store
   api_instance.add_pet(opts)
 rescue SwaggerClient::ApiError => e
-  puts "Exception when calling add_pet: #{e}"
+  puts "Exception when calling PetApi->add_pet: #{e}"
 end
 ```
 
@@ -96,7 +96,7 @@ begin
   #Fake endpoint to test byte array in body parameter for adding a new pet to the store
   api_instance.add_pet_using_byte_array(opts)
 rescue SwaggerClient::ApiError => e
-  puts "Exception when calling add_pet_using_byte_array: #{e}"
+  puts "Exception when calling PetApi->add_pet_using_byte_array: #{e}"
 end
 ```
 
@@ -150,7 +150,7 @@ begin
   #Deletes a pet
   api_instance.delete_pet(pet_id, opts)
 rescue SwaggerClient::ApiError => e
-  puts "Exception when calling delete_pet: #{e}"
+  puts "Exception when calling PetApi->delete_pet: #{e}"
 end
 ```
 
@@ -204,7 +204,7 @@ begin
   result = api_instance.find_pets_by_status(opts)
   p result
 rescue SwaggerClient::ApiError => e
-  puts "Exception when calling find_pets_by_status: #{e}"
+  puts "Exception when calling PetApi->find_pets_by_status: #{e}"
 end
 ```
 
@@ -257,7 +257,7 @@ begin
   result = api_instance.find_pets_by_tags(opts)
   p result
 rescue SwaggerClient::ApiError => e
-  puts "Exception when calling find_pets_by_tags: #{e}"
+  puts "Exception when calling PetApi->find_pets_by_tags: #{e}"
 end
 ```
 
@@ -314,7 +314,7 @@ begin
   result = api_instance.get_pet_by_id(pet_id)
   p result
 rescue SwaggerClient::ApiError => e
-  puts "Exception when calling get_pet_by_id: #{e}"
+  puts "Exception when calling PetApi->get_pet_by_id: #{e}"
 end
 ```
 
@@ -371,7 +371,7 @@ begin
   result = api_instance.get_pet_by_id_in_object(pet_id)
   p result
 rescue SwaggerClient::ApiError => e
-  puts "Exception when calling get_pet_by_id_in_object: #{e}"
+  puts "Exception when calling PetApi->get_pet_by_id_in_object: #{e}"
 end
 ```
 
@@ -428,7 +428,7 @@ begin
   result = api_instance.pet_pet_idtesting_byte_arraytrue_get(pet_id)
   p result
 rescue SwaggerClient::ApiError => e
-  puts "Exception when calling pet_pet_idtesting_byte_arraytrue_get: #{e}"
+  puts "Exception when calling PetApi->pet_pet_idtesting_byte_arraytrue_get: #{e}"
 end
 ```
 
@@ -480,7 +480,7 @@ begin
   #Update an existing pet
   api_instance.update_pet(opts)
 rescue SwaggerClient::ApiError => e
-  puts "Exception when calling update_pet: #{e}"
+  puts "Exception when calling PetApi->update_pet: #{e}"
 end
 ```
 
@@ -535,7 +535,7 @@ begin
   #Updates a pet in the store with form data
   api_instance.update_pet_with_form(pet_id, opts)
 rescue SwaggerClient::ApiError => e
-  puts "Exception when calling update_pet_with_form: #{e}"
+  puts "Exception when calling PetApi->update_pet_with_form: #{e}"
 end
 ```
 
@@ -592,7 +592,7 @@ begin
   #uploads an image
   api_instance.upload_file(pet_id, opts)
 rescue SwaggerClient::ApiError => e
-  puts "Exception when calling upload_file: #{e}"
+  puts "Exception when calling PetApi->upload_file: #{e}"
 end
 ```
 

@@ -33,7 +33,7 @@ begin
   #Delete purchase order by ID
   api_instance.delete_order(order_id)
 rescue SwaggerClient::ApiError => e
-  puts "Exception when calling delete_order: #{e}"
+  puts "Exception when calling StoreApi->delete_order: #{e}"
 end
 ```
 
@@ -93,7 +93,7 @@ begin
   result = api_instance.find_orders_by_status(opts)
   p result
 rescue SwaggerClient::ApiError => e
-  puts "Exception when calling find_orders_by_status: #{e}"
+  puts "Exception when calling StoreApi->find_orders_by_status: #{e}"
 end
 ```
 
@@ -144,7 +144,7 @@ begin
   result = api_instance.get_inventory
   p result
 rescue SwaggerClient::ApiError => e
-  puts "Exception when calling get_inventory: #{e}"
+  puts "Exception when calling StoreApi->get_inventory: #{e}"
 end
 ```
 
@@ -192,7 +192,7 @@ begin
   result = api_instance.get_inventory_in_object
   p result
 rescue SwaggerClient::ApiError => e
-  puts "Exception when calling get_inventory_in_object: #{e}"
+  puts "Exception when calling StoreApi->get_inventory_in_object: #{e}"
 end
 ```
 
@@ -248,7 +248,7 @@ begin
   result = api_instance.get_order_by_id(order_id)
   p result
 rescue SwaggerClient::ApiError => e
-  puts "Exception when calling get_order_by_id: #{e}"
+  puts "Exception when calling StoreApi->get_order_by_id: #{e}"
 end
 ```
 
@@ -308,7 +308,7 @@ begin
   result = api_instance.place_order(opts)
   p result
 rescue SwaggerClient::ApiError => e
-  puts "Exception when calling place_order: #{e}"
+  puts "Exception when calling StoreApi->place_order: #{e}"
 end
 ```
 

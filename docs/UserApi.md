@@ -36,7 +36,7 @@ begin
   #Create user
   api_instance.create_user(opts)
 rescue SwaggerClient::ApiError => e
-  puts "Exception when calling create_user: #{e}"
+  puts "Exception when calling UserApi->create_user: #{e}"
 end
 ```
 
@@ -83,7 +83,7 @@ begin
   #Creates list of users with given input array
   api_instance.create_users_with_array_input(opts)
 rescue SwaggerClient::ApiError => e
-  puts "Exception when calling create_users_with_array_input: #{e}"
+  puts "Exception when calling UserApi->create_users_with_array_input: #{e}"
 end
 ```
 
@@ -130,7 +130,7 @@ begin
   #Creates list of users with given input array
   api_instance.create_users_with_list_input(opts)
 rescue SwaggerClient::ApiError => e
-  puts "Exception when calling create_users_with_list_input: #{e}"
+  puts "Exception when calling UserApi->create_users_with_list_input: #{e}"
 end
 ```
 
@@ -182,7 +182,7 @@ begin
   #Delete user
   api_instance.delete_user(username)
 rescue SwaggerClient::ApiError => e
-  puts "Exception when calling delete_user: #{e}"
+  puts "Exception when calling UserApi->delete_user: #{e}"
 end
 ```
 
@@ -229,7 +229,7 @@ begin
   result = api_instance.get_user_by_name(username)
   p result
 rescue SwaggerClient::ApiError => e
-  puts "Exception when calling get_user_by_name: #{e}"
+  puts "Exception when calling UserApi->get_user_by_name: #{e}"
 end
 ```
 
@@ -278,7 +278,7 @@ begin
   result = api_instance.login_user(opts)
   p result
 rescue SwaggerClient::ApiError => e
-  puts "Exception when calling login_user: #{e}"
+  puts "Exception when calling UserApi->login_user: #{e}"
 end
 ```
 
@@ -322,7 +322,7 @@ begin
   #Logs out current logged in user session
   api_instance.logout_user
 rescue SwaggerClient::ApiError => e
-  puts "Exception when calling logout_user: #{e}"
+  puts "Exception when calling UserApi->logout_user: #{e}"
 end
 ```
 
@@ -368,7 +368,7 @@ begin
   #Updated user
   api_instance.update_user(username, opts)
 rescue SwaggerClient::ApiError => e
-  puts "Exception when calling update_user: #{e}"
+  puts "Exception when calling UserApi->update_user: #{e}"
 end
 ```
 
