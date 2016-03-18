@@ -17,7 +17,7 @@ Method | HTTP request | Description
 
 Delete purchase order by ID
 
-For valid response try integer IDs with value &lt; 1000. Anything above 1000 or nonintegers will generate API errors
+For valid response try integer IDs with value < 1000. Anything above 1000 or nonintegers will generate API errors
 
 ### Example
 ```ruby
@@ -169,7 +169,7 @@ This endpoint does not need any parameter.
 # **get_inventory_in_object**
 > Object get_inventory_in_object
 
-Fake endpoint to test arbitrary object return by &#39;Get inventory&#39;
+Fake endpoint to test arbitrary object return by 'Get inventory'
 
 Returns an arbitrary object which is actually a map of status codes to quantities
 
@@ -219,7 +219,7 @@ This endpoint does not need any parameter.
 
 Find purchase order by ID
 
-For valid response try integer IDs with value &lt;= 5 or &gt; 10. Other values will generated exceptions
+For valid response try integer IDs with value <= 5 or > 10. Other values will generated exceptions
 
 ### Example
 ```ruby

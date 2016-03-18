@@ -287,7 +287,7 @@ Name | Type | Description  | Notes
 
 Find pet by ID
 
-Returns a pet when ID &lt; 10.  ID &gt; 10 or nonintegers will simulate API error conditions
+Returns a pet when ID < 10.  ID > 10 or nonintegers will simulate API error conditions
 
 ### Example
 ```ruby
@@ -342,9 +342,9 @@ Name | Type | Description  | Notes
 # **get_pet_by_id_in_object**
 > InlineResponse200 get_pet_by_id_in_object(pet_id)
 
-Fake endpoint to test inline arbitrary object return by &#39;Find pet by ID&#39;
+Fake endpoint to test inline arbitrary object return by 'Find pet by ID'
 
-Returns a pet when ID &lt; 10.  ID &gt; 10 or nonintegers will simulate API error conditions
+Returns a pet when ID < 10.  ID > 10 or nonintegers will simulate API error conditions
 
 ### Example
 ```ruby
@@ -399,9 +399,9 @@ Name | Type | Description  | Notes
 # **pet_pet_idtesting_byte_arraytrue_get**
 > String pet_pet_idtesting_byte_arraytrue_get(pet_id)
 
-Fake endpoint to test byte array return by &#39;Find pet by ID&#39;
+Fake endpoint to test byte array return by 'Find pet by ID'
 
-Returns a pet when ID &lt; 10.  ID &gt; 10 or nonintegers will simulate API error conditions
+Returns a pet when ID < 10.  ID > 10 or nonintegers will simulate API error conditions
 
 ### Example
 ```ruby
