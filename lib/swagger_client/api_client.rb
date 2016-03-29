@@ -126,7 +126,7 @@ module SwaggerClient
     # @param [String] mime MIME
     # @return [Boolean] True if the MIME is applicaton/json
     def json_mime?(mime)
-       !!(mime =~ /\Aapplication\/json(;.*)?\z/i)
+       !(mime =~ /\Aapplication\/json(;.*)?\z/i).nil?
     end
 
     # Deserialize the response to the given return type.
