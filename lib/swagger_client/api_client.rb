@@ -237,7 +237,7 @@ module SwaggerClient
     # @param [String] filename the filename to be sanitized
     # @return [String] the sanitized filename
     def sanitize_filename(filename)
-      filename.gsub /.*[\/\\]/, ''
+      filename.gsub(/.*[\/\\]/, '')
     end
 
     def build_request_url(path)
