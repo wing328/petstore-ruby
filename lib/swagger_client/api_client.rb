@@ -31,8 +31,6 @@ module SwaggerClient
     # @return [Hash]
     attr_accessor :default_headers
 
-    # Initializes the ApiClient
-    # @option config [Configuration] Configuraiton for initializing the object, default to Configuration.default
     def initialize(config = Configuration.default)
       @config = config
       @user_agent = "Swagger-Codegen/#{VERSION}/ruby"
@@ -73,15 +71,6 @@ module SwaggerClient
       return data, response.code, response.headers
     end
 
-    # Builds the HTTP request
-    #
-    # @param [String] http_method HTTP method/verb (e.g. POST)
-    # @param [String] path URL path (e.g. /account/new)
-    # @option opts [Hash] :header_params Header parameters
-    # @option opts [Hash] :query_params Query parameters
-    # @option opts [Hash] :form_params Query parameters
-    # @option opts [Object] :body HTTP body (JSON/XML)
-    # @return [Typhoeus::Request] A Typhoeus Request
     def build_request(http_method, path, opts = {})
       url = build_request_url(path)
       http_method = http_method.to_sym.downcase
@@ -123,15 +112,12 @@ module SwaggerClient
     #   application/json
     #   application/json; charset=UTF8
     #   APPLICATION/JSON
-    # @param [String] mime MIME
-    # @return [Boolean] True if the MIME is applicaton/json
     def json_mime?(mime)
-       !(mime =~ /\Aapplication\/json(;.*)?\z/i).nil?
+       !!(mime =~ /\Aapplication\/json(;.*)?\z/i)
     end
 
     # Deserialize the response to the given return type.
     #
-    # @param [Response] response HTTP response
     # @param [String] return_type some examples: "User", "Array[User]", "Hash[String,Integer]"
     def deserialize(response, return_type)
       body = response.body
@@ -162,9 +148,6 @@ module SwaggerClient
     end
 
     # Convert data to the given return type.
-    # @param [Object] data Data to be converted
-    # @param [String] return_type Return type
-    # @return [Mixed] Data in a particular type
     def convert_to_type(data, return_type)
       return nil if data.nil?
       case return_type
@@ -237,7 +220,7 @@ module SwaggerClient
     # @param [String] filename the filename to be sanitized
     # @return [String] the sanitized filename
     def sanitize_filename(filename)
-      filename.gsub(/.*[\/\\]/, '')
+      filename.gsub /.*[\/\\]/, ''
     end
 
     def build_request_url(path)
@@ -246,12 +229,6 @@ module SwaggerClient
       URI.encode(@config.base_url + path)
     end
 
-    # Builds the HTTP request body
-    #
-    # @param [Hash] header_params Header parameters
-    # @param [Hash] form_params Query parameters
-    # @param [Object] body HTTP body (JSON/XML)
-    # @return [String] HTTP body data in the form of string
     def build_request_body(header_params, form_params, body)
       # http form
       if header_params['Content-Type'] == 'application/x-www-form-urlencoded' ||
@@ -275,10 +252,6 @@ module SwaggerClient
     end
 
     # Update hearder and query params based on authentication settings.
-    #
-    # @param [Hash] header_params Header parameters
-    # @param [Hash] form_params Query parameters
-    # @param [String] auth_names Authentication scheme name
     def update_params_for_auth!(header_params, query_params, auth_names)
       Array(auth_names).each do |auth_name|
         auth_setting = @config.auth_settings[auth_name]
@@ -291,9 +264,6 @@ module SwaggerClient
       end
     end
 
-    # Sets user agent in HTTP header
-    #
-    # @param [String] user_agent User agent (e.g. swagger-codegen/ruby/1.0.0)
     def user_agent=(user_agent)
       @user_agent = user_agent
       @default_headers['User-Agent'] = @user_agent
@@ -325,13 +295,13 @@ module SwaggerClient
     # @return [String] JSON string representation of the object
     def object_to_http_body(model)
       return model if model.nil? || model.is_a?(String)
-      local_body = nil
+      _body = nil
       if model.is_a?(Array)
-        local_body = model.map{|m| object_to_hash(m) }
+        _body = model.map{|m| object_to_hash(m) }
       else
-        local_body = object_to_hash(model)
+        _body = object_to_hash(model)
       end
-      local_body.to_json
+      _body.to_json
     end
 
     # Convert object(non-array) to hash.
